@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Message from './Message'
+import ListGroup from './components/ListGroup'
 import './App.css'
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Message />
+      <ListGroup />
     </div>
   )
 }

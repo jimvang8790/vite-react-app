@@ -3,7 +3,7 @@ import React from 'react'
 const Message = () => {
     const name = 'Jim';
     return (
-        <div>Hello Vite Worlds by {name}</div>
+        <h1>Hello Vite Worlds by {name}</h1>
     )
 }
 
