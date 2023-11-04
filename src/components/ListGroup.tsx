@@ -1,8 +1,13 @@
 import React from "react";
 import { Fragment, MouseEvent, useState } from "react";
 
-const ListGroup = () => {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+// {items: [], heading: string}
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+
+const ListGroup = ({ items, heading }: ListGroupProps) => {
   // let selectedIndex = 0; // Managing state
   // The benefits of using a function is that functions can have parameters
   //   const getMessage = () => {
@@ -19,7 +24,7 @@ const ListGroup = () => {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {/* {getMessage()} */}
       {/* {items.length === 0 ? <p>No item found</p> : null} */}
       {items.length === 0 && <p>No item found</p>}{" "}

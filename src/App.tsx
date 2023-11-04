@@ -6,10 +6,11 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
   return (
     <div className="App">
-      <ListGroup />
+      <ListGroup items={items} heading={"Cities"} />
     </div>
   );
 }
