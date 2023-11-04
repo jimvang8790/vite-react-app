@@ -5,9 +5,11 @@ import { Fragment, MouseEvent, useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
+  // (item: string) => void
+  onSelectItem: (item: string) => void;
 }
 
-const ListGroup = ({ items, heading }: ListGroupProps) => {
+const ListGroup = ({ items, heading, onSelectItem }: ListGroupProps) => {
   // let selectedIndex = 0; // Managing state
   // The benefits of using a function is that functions can have parameters
   //   const getMessage = () => {
@@ -40,6 +42,7 @@ const ListGroup = ({ items, heading }: ListGroupProps) => {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
           >
             {item}
