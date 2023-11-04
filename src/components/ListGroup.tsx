@@ -54,3 +54,16 @@ const ListGroup = ({ items, heading, onSelectItem }: ListGroupProps) => {
 };
 
 export default ListGroup;
+
+// Notes on Props vs State
+// Props:
+// - input passed to a component
+// - similar to function arguments
+// - immutable: unchangeable and read only
+// - cause a re-render, meaning React will update the DOM
+
+// State:
+// - Data managed by a component
+// - Similar to local variables
+// - Mutable: changeable over time
+// - cause a re-render, meaning React will update the DOM
