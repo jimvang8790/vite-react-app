@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import Message from "./Message";
 import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         heading={"Cities"}
         onSelectItem={handleSelectItem}
       />
+      <Alert>
+        Passing <span>Children from another</span> component!
+      </Alert>
     </div>
   );
 }
