@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import Message from "./Message";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         heading={"Cities"}
         onSelectItem={handleSelectItem}
       />
+      <Button onClick={() => console.log("Clicked")}>Button</Button>
       <Alert>
         Passing <span>Children from another</span> component!
       </Alert>
