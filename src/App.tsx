@@ -13,6 +13,8 @@ function App() {
     console.log("item", item);
   };
 
+  const [alertVisible, setAlertVisibility] = useState(false);
+
   return (
     <div className="App">
       <ListGroup
@@ -20,10 +22,10 @@ function App() {
         heading={"Cities"}
         onSelectItem={handleSelectItem}
       />
-      <Button onClick={() => console.log("Clicked")}>Button</Button>
-      <Alert>
-        Passing <span>Children from another</span> component!
-      </Alert>
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>
+      )}
+      <Button onClick={() => setAlertVisibility(true)}>Button</Button>
     </div>
   );
 }
